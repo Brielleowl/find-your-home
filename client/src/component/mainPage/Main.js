@@ -9,13 +9,37 @@ const items =[
         header:'house1',
         description:'xxxxxxxxx',
         meta:'price',
+       
         
     },
     {
         header:'house2',
         description:'xxxxxxxxx',
-        meta:'price',
-    }
+        meta:'price'
+    },
+    {
+        header:'house3',
+        description:'xxxxxxxxx',
+        meta:'price'
+
+    },
+    {
+        header:'house4',
+        description:'xxxxxxxxx',
+        meta:'price'
+    },
+    {
+        header:'house5',
+        description:'xxxxxxxxx',
+        meta:'price'
+
+    },
+    {
+        header:'house6',
+        description:'xxxxxxxxx',
+        meta:'price'
+    },
+
 ]
 const Main =() =>{
         return(
@@ -29,7 +53,10 @@ const Main =() =>{
                 <p className='mainPadding'>
 
                 </p>
-                <Card.Group centered items={items} />
+                <Container width={50}>
+                    <Card.Group items={items} itemsPerRow={2}/>
+                </Container>
+                
 
             </div>
   

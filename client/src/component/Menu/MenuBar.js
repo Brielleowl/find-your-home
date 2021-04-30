@@ -47,7 +47,7 @@ const MenuBar = (props) =>{
                 
                 />
                 <Menu.Menu position='right'>
-                    <Menu.Item
+                    <Menu.Item as={Link} to='/addproperty'
                         name='Add a Property'
                         
                     />
@@ -56,7 +56,7 @@ const MenuBar = (props) =>{
                         
                     />
                     <Menu.Item as={Link} to='/signup'
-                        name='Sign Up'
+                        name='Join in now'
                         
                     />
                 </Menu.Menu>

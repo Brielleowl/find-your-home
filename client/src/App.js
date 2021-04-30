@@ -3,13 +3,17 @@ import Main from './component/mainPage/Main'
 import './App.css';
 import {BrowserRouter as Router} from 'react-router-dom';
 import { Route } from 'react-router';
+import {Button} from 'semantic-ui-react'
 import Apartment from './component/Apartment/Apartment'
-import MenuBar from './component/mainPage/MenuBar';
+import MenuBar from './component/Menu/MenuBar';
 import Condo from './component/Condo/Condo'
 import House from './component/House/House';
 import Townhomes from './component/TownHomes/Townhomes';
 import SignUp from './component/User/SignUp';
 import SignIn from './component/User/SignIn';
+
+import axios from 'axios'
+import AddProperty from './component/AddProperty/AddProperty';
 class App extends Component {
 
   constructor(props) {
@@ -17,15 +21,23 @@ class App extends Component {
     this.state = { apiResponse: "" };
 }
 
-callAPI() {
-    fetch("http://localhost:9000/testAPI")
-        .then(res => res.text())
-        .then(res => this.setState({ apiResponse: res }));
-}
+// callAPI() {
+//     fetch("http://localhost:9000/testAPI")
+//         .then(res => res.text())
+//         .then(res => this.setState({ apiResponse: res }));
+// }
 
-componentWillMount() {
-    this.callAPI();
-}
+// componentWillMount() {
+//     this.callAPI();
+// }
+
+// onSubmit(e){
+//   const user={
+//     username:'Shirley'
+//   }
+//   axios.post('http://localhost:9000/testAPI',user)
+//   .then(res => console.log(res.data));
+// }
   render() {
     return (
       <Router>
@@ -46,7 +58,9 @@ componentWillMount() {
          />
          <Route path="/signin" exact component={SignIn}
          />
-          <p className="App-intro">;{this.state.apiResponse}</p>
+         <Route path="/addproperty" exact component={AddProperty}
+         />
+          {/* <Button type='submit'onSubmit= {this.onSubmit}>Submit</Button> */}
         </div>
       </Router>
 

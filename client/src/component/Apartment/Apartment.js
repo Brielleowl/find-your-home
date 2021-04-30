@@ -1,38 +1,30 @@
 import React, {Component} from 'react'
 
-import {Segment,Grid,Image,Column} from 'semantic-ui-react'
+import {Segment,Grid,Image} from 'semantic-ui-react'
 import GoogleMap from '../Map/GoogleMap'
-import Post from '../Post/Post'
 
-const mapStyle = {
-    height: '880px',
-    width:'1200px'
-  }
-  const postStyle = {
-    height: '900px',
-    width: '700px'
-  }
-  const style={
-      height:'900px'
-  }
+import PostMenu from '../Post/PostMenu'
+import '../Conponent.css'
+
+
 const Apartment=() => {
     
     return (   
         
            
         
-                <Grid columns={2} >
-                    <Grid.Column width={8} className={style}>
-                        
-                            <Post/>
-                        
-                    </Grid.Column> 
-                    <Grid.Column width={8} style={style}>
-                        
-                        <GoogleMap/>
-
-                    </Grid.Column>
-                </Grid>   
+        <Grid columns = {2} className='houseStyle'>
+        <Grid.Column className = 'leftPostStyle'>
+            <PostMenu/>
+            
+            
+        </Grid.Column> 
+            <Grid.Column className='mapStyle'>
+                
+                <GoogleMap/>
+                
+            </Grid.Column>
+    </Grid>     
                    
          
     
